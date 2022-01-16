@@ -97,6 +97,12 @@ kotlin {
         val macosX64Main by getting {
             dependsOn(nativeMain)
         }
+        val nativeTest by creating {
+            dependsOn(nativeMain)
+            dependencies {
+                implementation(kotlin("test"))
+            }
+        }
     }
 }
 
